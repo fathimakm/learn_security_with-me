@@ -41,7 +41,7 @@ __Digital Certificate:__**
 - A digital certificate is a digital document that verifies the identity of an entity, such as a website, organization, or individual, in an online environment.
 + It is issued by a trusted third party called a Certificate Authority (CA).
 
-*Digital certificates contain the following information*
+* Digital certificates contain the following information
 
 1. Public Key : A digital certificate includes a public key that corresponds to a unique private key held by the entity.
 The public key is used for encryption, authentication, and establishing secure connections.
