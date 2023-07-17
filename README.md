@@ -32,9 +32,34 @@ _
 
 ***
 
-## SSH
-*Secure Shell*
-***
+## Digital Certicicate and Signatures
 
-+ network protocol used for secure remote communication between computers. 
-- It provides a secure way to access and manage remote systems over an unsecured network, such as the internet.
+* Digital certificates and digital signatures are essential components of modern cryptographic systems used to ensure the authenticity, integrity, and security of digital information.
+
+
+__Digital Certificate:__**
+- A digital certificate is a digital document that verifies the identity of an entity, such as a website, organization, or individual, in an online environment.
++ It is issued by a trusted third party called a Certificate Authority (CA).
+
+*Digital certificates contain the following information*
+
+1. Public Key : A digital certificate includes a public key that corresponds to a unique private key held by the entity.
+The public key is used for encryption, authentication, and establishing secure connections.
+2. Entity Information: The certificate contains information about the entity, such as its name, domain, and other relevant details. This information is used to verify the identity of the entity.
+3. Certificate Authority Information: The digital certificate also includes information about the issuing CA, such as its name, digital signature, and public key. This allows the recipient to verify the authenticity and trustworthiness of the certificate.
+
+__Digital Signature__**
++ cryptographic mechanism used to verify the integrity and authenticity of digital data.
+- It provides assurance that the data has not been tampered with and that it originated from the claimed source
+- Digital signatures work as follows:
+
+1. Hashing: A cryptographic hash function takes the original data (message, file, etc.) and generates a fixed-length string of characters called a hash value or message digest. The hash function is designed in such a way that even a small change in the input data will produce a significantly different output.
+
+
+2. Private Key Encryption: The hash value is then encrypted using the sender's private key. This encrypted hash value is the digital signature. The private key ensures that only the sender, with their unique private key, can create the signature.
+
+3. Verification: The recipient of the data uses the sender's public key, obtained from their digital certificate, to decrypt the digital signature. This produces the original hash value.
+
+4. Hash Comparison: The recipient independently calculates the hash value of the received data using the same hash function. They compare this calculated hash value with the decrypted hash value. If they match, it verifies that the data has not been modified during transmission and that it was indeed signed by the sender.
+
+***
