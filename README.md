@@ -1,12 +1,12 @@
 # security_learn_notes
 ## SSL 
-*SSL Secure Socket Layer*
+*SSL - Secure Socket Layer*
 ---
 * It is a security protocol used to establish an encrypted link between a web server and a web browser.
 - ensures that the data transmitted between the server and the browser remains private and secure.
 + SSL works through a process called encryption. Encryption converts the data into a code that can only be understood by the intended recipient, which is the Web Server.
 
-**What happens when you connect to a website using SSL**
+__What happens when you connect to a website using SSL__**
 1. The web server sends its SSL certificate to your browser.__The certificate contains a public key, which is used to encrypt the data.__
 2. The browser checks the SSL certificate to ensure it is valid and issued by a trusted authority. It also verifies that the website's domain matches the information in the certificate.
 3. If the certificate is valid, your browser generates a session key, which is a unique encryption code.
@@ -21,5 +21,20 @@ _It's important to note that SSL has been succeeded by a newer protocol called T
 
 ***
 
+### Difference between SSL and TLS
+_
 
+* TLS can work with SSL-enabled systems, but SSL cannot work with TLS-only systems.
+- SSL 3.0 had several security vulnerabilities. TLS was designed to address these vulnerabilities and provide enhanced security features.
++ TLS introduced new encryption algorithms, key exchange methods, and hash functions, offering stronger cryptographic options compared to SSL. This allows for a stronger and more secure connections.
+* The TLS handshake process is slightly different from SSL. TLS added additional steps to enhance security during the handshake, such as improved authentication and key exchange methods.
+- TLS introduced optimizations to improve performance. It reduces latency and connection setup time, making TLS connections faster compared to earlier versions.
 
+***
+
+## SSH
+*Secure Shell*
+***
+
++ network protocol used for secure remote communication between computers. 
+- It provides a secure way to access and manage remote systems over an unsecured network, such as the internet.
