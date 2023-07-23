@@ -71,7 +71,7 @@ __Digital Signature__**
 + Attack surface mapping is the process of analyzing an application's core functionality, business logic, and control flow to identify potential inputs or vectors through which an attacker could try to enter an application environment
 
 
-- A service commonly exploited by attackers in third-party cloud environments is REST-based web services known as cloud metadata endpoints. If configured, a metadata endpoint provides programmatic access to a cloud server’s system configuration, networking details, authentication access keys, etc. 
+- A service commonly exploited by attackers in third-party cloud environments is REST-based web services known as __cloud metadata endpoints__. If configured, a metadata endpoint provides programmatic access to a cloud server’s system configuration, networking details, authentication access keys, etc. 
 
 
 -  IAM Roles?  
