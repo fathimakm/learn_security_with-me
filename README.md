@@ -1,6 +1,5 @@
 # security_learn_notes
-## SSL 
-*SSL - Secure Socket Layer*
+## SSL Secure Socket Layer
 ---
 * It is a security protocol used to establish an encrypted link between a web server and a web browser.
 - ensures that the data transmitted between the server and the browser remains private and secure.
@@ -22,7 +21,7 @@ _It's important to note that SSL has been succeeded by a newer protocol called T
 ***
 
 ### Difference between SSL and TLS
-_
+
 
 * TLS can work with SSL-enabled systems, but SSL cannot work with TLS-only systems.
 - SSL 3.0 had several security vulnerabilities. TLS was designed to address these vulnerabilities and provide enhanced security features.
@@ -63,7 +62,7 @@ __Digital Signature__**
 4. Hash Comparison: The recipient independently calculates the hash value of the received data using the same hash function. They compare this calculated hash value with the decrypted hash value. If they match, it verifies that the data has not been modified during transmission and that it was indeed signed by the sender.
 
 ***
-## SSRF
+## SSRF server-side request forgery
 
 - ability to manipulate a web application into sending unauthorized requests to a third-party site or resource is known as Server Side Request Forgery (SSRF).
 
@@ -86,3 +85,35 @@ __Digital Signature__**
 
 ***
 ## Cybersecurity Tools
+
+__Log__
+    A record of events that occur in an organization system.
+    ex: employees signing in to their computers.
+    - helps identify vulnerabilities and potential security breaches.
+
+1. __SIEM tool__
+    *Security information and event management*
+     - An application that collects and analyzes log data to monitor critical activities in an organization.
+     - reduce the amount of data an analyst must review by providing alerts for specific types of threats, risks, and vulnerabilities.
+     - provides a series of dashboards that visually organize data into categories, allowing users to select the data they wish to analyze.
+     - SIEM tools also come with different hosting options, including on-premise and cloud. cloud-hosted version(recommended) tends to be easier to set up, use, and maintain than an on-premise version(used by less experienced people)
+        examples of tools: splunk and chronicle
+        __splunk__ is a data analysis platform. splunk enterprice provides SIEM solution.
+        Splunk Enterprise is a self-hosted tool used to retain, analyze, and search an organization's log data.
+        __Chronicle.__ is a cloud-native SIEM tool that stores security data for search and analysis. 
+        Cloud-native means that Chronicle allows for fast delivery of new features.
+
+2. __playbook__ is a manual that provides details about any operational action, such as how to respond before, during and after a security incident. 
+     In a forensic analysis, there wil be two type of playbooks that would need to be handled.
+     - chain of custody ( Chain of custody is the process of documenting evidence possession and control during an incident lifecycle. )
+     - protecting and preserving evidence playbook (Protecting and preserving evidence is the process of properly working with fragile and volatile digital evidence. )
+
+
+***
+
+User Interface
+GUI - Graphical user Interface (a program that allows a user to control the functions of the operating system)
+    - A GUI is a user interface that uses icons on the screen to manage different tasks on the computer. (ex: a start menu with program groups, a task bar for launching programs, and a desktop with icons and shortcuts)
+    - allows only one request at a time
+CLI - Command Line Interface is a text-based user interface that uses commands to interact with the computer. 
+    - allows multiple request at a time
