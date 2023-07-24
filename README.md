@@ -127,7 +127,11 @@ __Linux__
     -kernel(manages processes and memory)
     -hardware(physical componemt of a computer ex: CPU, mouse, keyboard)
 
-- kali linux derived from debian
+- kali linux derived from debian, has pre-installed tools related to penetration testing and digital forensics.(parrot also have tools for penetration)
+
++ KALI LINUX, Ubuntu, Parrot, Red Hat(not free, subscription based), and CentOS are all widely used Linux distributions.
+
+KALI LINUX, Ubuntu, Parrot - debian based, open source
 
 - penetration testing tools in Kali linux
     -metasploit(to look for and exploit vulnerabilities on machines.)
@@ -140,3 +144,22 @@ __Linux__
         1. tcpdump(used to capture network traffic)
         2.  Wireshark. It has a graphical user interface that can be used to analyze live and captured network traffic
         3. Autopsy is a forensic tool used to analyze hard drives and smartphones.
+
+- Advanced package tool
+
+    - Suricata, a network analysis tool used for intrusion detection
+    - tcpdump application. This is a command-line tool that can be used to capture network traffic in a Linux Bash shell.
+
+    sudo apt install (application name)
+    sudo apt remove (application name)
+    apt list --installed 
+    echo 
+    expr
+    clear
+
+    cat command displays the content of a file
+    head command displays just the beginning of a file, by default 10 lines
+    tail command can be used to display just the end of a file, by default 10 lines
+     less command returns the content of a file one page at a time. 
+
+     The grep command searches a specified file and returns all lines in the file containing a specified string. The grep command commonly takes two arguments: a specific string to search for and a specific file to search through. (grep OS updates.txt returns all lines containing OS in the updates.txt file. )
