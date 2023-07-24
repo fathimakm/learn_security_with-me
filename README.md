@@ -160,6 +160,26 @@ KALI LINUX, Ubuntu, Parrot - debian based, open source
     cat command displays the content of a file
     head command displays just the beginning of a file, by default 10 lines
     tail command can be used to display just the end of a file, by default 10 lines
-     less command returns the content of a file one page at a time. 
+    less command returns the content of a file one page at a time. 
 
-     The grep command searches a specified file and returns all lines in the file containing a specified string. The grep command commonly takes two arguments: a specific string to search for and a specific file to search through. (grep OS updates.txt returns all lines containing OS in the updates.txt file. )
+     The __grep__ command searches a specified file and returns all lines in the file containing a specified string. The grep command commonly takes two arguments: a specific string to search for and a specific file to search through. (grep OS updates.txt returns all lines containing OS in the updates.txt file. )
+
+     __Piping__ sends the standard output of one command as standard input to another command for further processing. pipe character (|)
+
+      ls /home/analyst/reports | grep users
+      returns the file and directory names in the reports directory that contain users.
+
+    The __find__ command searches for directories and files that meet specified criteria.
+     find /home/analyst/projects searches for everything starting at the projects directory. 
+
+    __Options__ modify the behavior of a command and commonly begin with a hyphen (-). 
+    1.    -name and -iname
+         -name is case-sensitive, and -iname is not. 
+             ex: find /home/analyst/projects -name "*log*"
+            find /home/analyst/projects -iname "*log*"
+        The specific string you are searching for must be entered in quotes after the -name or -iname options.
+        * is used as a wildcard to represent zero or more unknown characters.
+
+    
+    2.    -mtime (to find files or directories last modified within a certain time frame)
+        find /home/analyst/projects -mtime -3
