@@ -111,9 +111,32 @@ __Log__
 
 ***
 
-User Interface  (a program that allows a user to control the functions of the operating system)
+__User Interface__  (a program that allows a user to control the functions of the operating system)
 GUI - Graphical user Interface
     - A GUI is a user interface that uses icons on the screen to manage different tasks on the computer. (ex: a start menu with program groups, a task bar for launching programs, and a desktop with icons and shortcuts)
     - allows only one request at a time
 CLI - Command Line Interface is a text-based user interface that uses commands to interact with the computer. 
     - allows multiple request at a time
+
+
+__Linux__
+- components
+    -applictaion(program that performs a specific tasks)
+    -shell( processes commands and outputs the results)
+    -Filesystem Hierarchy Standard, or FHS(organizes data). 
+    -kernel(manages processes and memory)
+    -hardware(physical componemt of a computer ex: CPU, mouse, keyboard)
+
+- kali linux derived from debian
+
+- penetration testing tools in Kali linux
+    -metasploit(to look for and exploit vulnerabilities on machines.)
+    -burpsuite(to look for and exploit vulnerabilities on machines.)
+    -john the ripper( tool used to guess passwords)
+
+
+- Digital forensics is the process of collecting and analyzing data to determine what has happened after an attack.
+    tools:
+        1. tcpdump(used to capture network traffic)
+        2.  Wireshark. It has a graphical user interface that can be used to analyze live and captured network traffic
+        3. Autopsy is a forensic tool used to analyze hard drives and smartphones.
