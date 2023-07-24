@@ -111,8 +111,8 @@ __Log__
 
 ***
 
-User Interface
-GUI - Graphical user Interface (a program that allows a user to control the functions of the operating system)
+User Interface  (a program that allows a user to control the functions of the operating system)
+GUI - Graphical user Interface
     - A GUI is a user interface that uses icons on the screen to manage different tasks on the computer. (ex: a start menu with program groups, a task bar for launching programs, and a desktop with icons and shortcuts)
     - allows only one request at a time
 CLI - Command Line Interface is a text-based user interface that uses commands to interact with the computer. 
