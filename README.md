@@ -245,25 +245,64 @@ user -rwx, g-rw, o-no access
 
 
 
-- *root user:* A user with high priviliges to modify the system. ( can create, modify, or delete any file and run any program.)(only root user can add new users)
+- *__root user:__* A user with high priviliges to modify the system. ( can create, modify, or delete any file and run any program.)(only root user can add new users)
 problems: security issues, accountability, irreversable mistakes.
 
 
-- _sudo_  - A command that temporarily grants elevated permissions to specific users.
+- __sudo__  - A command that temporarily grants elevated permissions to specific users.
 sudo comes from super-user-do and lets you execute commands as an elevated user without having to sign in and out of another account.
 
  sudoers file - a configuration file to use sudo.
 
-useradd // add a user to the s/m
+*useradd* // add a user to the s/m
 sudo useradd abcname
 
 
-userdel // deletes a user
+*userdel* // deletes a user
 sudo userdel abcname
 
 -g: Sets the user’s default group, also called their primary group
+
 sudo useradd -g security abc1 // adds a new user abc1 and assigns their primary group to be security
 
 
 -G: Adds the user to additional groups, also called supplemental or secondary groups
+
 sudo useradd -G finance,admin abc1 //  adds a new user and adds them to the existing finance and admin groups.
+
+
+__usermod__ - modifies existing user accounts
+-g and -G can be used with usermod
+
+sudo usermod -g executive abc1 //  changed primary group to the executive group
+
+
+sudo usermod -a -G marketing fgarcia  // to use -G , -a is also used (add user to the secondary marketing group.)(Using -a with -G ensures that the new groups are added but existing groups are not replaced.)
+
+
+-d: Changes the user’s home directory.
+-l: Changes the user’s login name.
+-L: Locks the account so the user can’t log in.
+
+__chown__
+changes ownership of a file or directory (can change user or group ownership. )
+
+
+sudo chown abc1 access.txt.  // ownership changed to abc1
+sudo chown :security access.txt  //enter a colon (:) before security to designate it as a group name.
+
+
+
+
+__man__ displays information on other commands and how they work (like an documentation or manual)
+
+man chown
+
+ __whatis__ command displays a description of a command on a single line
+
+whatis userdel
+
+ __apropos__ command searches the man page descriptions for a specified string.
+ 
+apropos password
+apropos -a change password       //(nclude the -a option to search for multiple words.)
