@@ -303,6 +303,60 @@ man chown
 whatis userdel
 
  __apropos__ command searches the man page descriptions for a specified string.
- 
+
 apropos password
-apropos -a change password       //(nclude the -a option to search for multiple words.)
+apropos -a change password       //(include the -a option to search for multiple words.)
+
+
+
+***
+
+
+__Database and SQL__
+DB - organized collection of information or data 
+
+
+Relational DB - A structured database containing tables that are related to each other.
+
+
+
+- Tables contain rows(records) and columns
+    - if two tables have common column they are connected
+    - The columns that relate two tables to each other are called keys (there are two type of keys)
+
+    * The primary key refers to a column where every row has a unique entry. The primary key must not have any duplicate values, or any null or empty values. 
+
+    * The foreign key is a column in a table that is a primary key in another table. Foreign keys, can have empty values and duplicates.
+
+    * table can only have one primary key, but multiple foreign keys.
+
+SQL Structured Query Language
+A progaramming language used to create, interact and request information from a database.
+
+Query - request for data from table or combination of tables
+
+SELECT customerid, city, country
+FROM customers
+ORDER BY city;
+
+
+(ASC,DESC)
+
+
+
+SELECT customerid, city, country
+FROM customers
+ORDER BY country, city;
+
+SELECT firstname, lastname, title, email
+FROM employees
+WHERE title = 'IT Staff';
+
+*Filtering for patterns*
+    wildcard % and _
+            - percentage sign substitutes for any number of other characters
+            - The underscore symbol only substitutes for one other character
+
+    Reference: ![Example of % and_](https://www.coursera.org/learn/linux-and-sql/supplement/r9KwG/the-where-clause-and-basic-operators)
+
+    LIKE operator
