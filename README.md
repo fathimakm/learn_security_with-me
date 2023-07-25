@@ -210,3 +210,6 @@ KALI LINUX, Ubuntu, Parrot - debian based, open source
     When you’re inside the directory containing the permissions.txt file, entering echo "last updated date" >> permissions.txt adds the string “last updated date” to the file contents. Entering echo "time" > permissions.txt after this command overwrites the entire file contents of permissions.txt with the string “time”.
 
      Both the > and >> operators will create a new file if one doesn’t already exist with your specified name.
+
+
+---
