@@ -408,5 +408,24 @@ INNER JOIN machines ON employees.device_id = machines.device_id;
 
 ON keyword and the = operator to indicate the column you are joining the tables on. 
 
+`SELECT *
+
+FROM employees
+
+RIGHT JOIN machines ON employees.device_id = machines.device_id;`
+
+
+
+`SELECT *
+
+FROM machines
+
+RIGHT JOIN employees ON employees.device_id = machines.device_id;`
 
 -All joins return the records that match on a specified column. INNER JOIN will return only these records. Outer joins also return all other records from one or both of the tables. LEFT JOIN returns all records from the first or left table, RIGHT JOIN returns all records from the second or right table, and FULL OUTER JOIN returns all records from both tables. 
+
+`SELECT *
+
+FROM employees
+
+FULL OUTER JOIN machines ON employees.device_id = machines.device_id;`
