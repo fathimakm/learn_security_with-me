@@ -400,7 +400,7 @@ FROM customers
 WHERE NOT country = 'Canada' AND NOT country = 'USA';`
 
 __Join__
-+ INNER JOIN returns rows matching on a specified column that exists in more than one table.
+
 
 SELECT *
 FROM employees
