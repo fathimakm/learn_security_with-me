@@ -398,3 +398,5 @@ WHERE NOT country = 'USA';`
 `SELECT firstname, lastname, email, country
 FROM customers
 WHERE NOT country = 'Canada' AND NOT country = 'USA';`
+
+__Join__
