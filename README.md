@@ -228,7 +228,7 @@ drwxrwxrwx //directory
 -l // to display permissions
 ls -l //displays files and their respective permissions
 -a // displays all files including hidden files
-ls -la // displays all files includig hidden ones and their respective functions.
+ls -la // displays all files including hidden ones and their respective functions.
 
 
 - changing permissions
@@ -240,3 +240,6 @@ other -o
 
 
 ex:  chmod g-x, o+r access.txt
+
+chmod 760 access.txt
+user -rwx, g-rw, o-no access
