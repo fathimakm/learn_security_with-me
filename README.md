@@ -357,6 +357,6 @@ WHERE title = 'IT Staff';
             - percentage sign substitutes for any number of other characters
             - The underscore symbol only substitutes for one other character
 
-    Reference: ![Example of % and_](https://www.coursera.org/learn/linux-and-sql/supplement/r9KwG/the-where-clause-and-basic-operators)
+    
 
     LIKE operator
