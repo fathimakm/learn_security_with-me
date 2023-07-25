@@ -164,6 +164,8 @@ KALI LINUX, Ubuntu, Parrot - debian based, open source
 
      The __grep__ command searches a specified file and returns all lines in the file containing a specified string. The grep command commonly takes two arguments: a specific string to search for and a specific file to search through. (grep OS updates.txt returns all lines containing OS in the updates.txt file. )
 
+     grep OS updates.txt
+
      __Piping__ sends the standard output of one command as standard input to another command for further processing. pipe character (|)
 
       ls /home/analyst/reports | grep users
@@ -182,4 +184,29 @@ KALI LINUX, Ubuntu, Parrot - debian based, open source
 
     
     2.    -mtime (to find files or directories last modified within a certain time frame)
-        find /home/analyst/projects -mtime -3
+        find /home/analyst/projects -mtime -3 //returns file or directories that was modfied within the last 3 days.
+
+        -mtime +1 // last modified more than one day ago 
+        -mtime -1 //  last modified less than one day ago
+
+         -mmin //  search on minutes rather than days
+
+
+
+    mkdir  // creates a new directory
+    rmdir // removes, deletes a directory
+    touch // creates a new file
+    rm // removes, deletes a file
+    mv // moving a file
+    cp //copying a file
+    nano s a command line file editor  Ex: nano report.txt
+    to save a file in anano ctrl+o, to exit ctrl+x
+
+    __> and >>__
+    In addition to the pipe (|), use right angle bracket (>) and double right angle bracket (>>) operators to redirect standard output.
+
+    > overwrites your existing file, and >> adds your content to the end of the existing file instead of overwriting it.
+
+    When you’re inside the directory containing the permissions.txt file, entering echo "last updated date" >> permissions.txt adds the string “last updated date” to the file contents. Entering echo "time" > permissions.txt after this command overwrites the entire file contents of permissions.txt with the string “time”.
+
+     Both the > and >> operators will create a new file if one doesn’t already exist with your specified name.
