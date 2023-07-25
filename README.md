@@ -217,8 +217,9 @@ KALI LINUX, Ubuntu, Parrot - debian based, open source
 
 ### Permissions
 
-rwx
-owner, group, global
+* Types of permission
+__rwx__
+user(owner), group, global(other)
 rwxrwxrwx
 
 -rwxrwxrwx //normal file starts with hyphen
@@ -228,3 +229,14 @@ drwxrwxrwx //directory
 ls -l //displays files and their respective permissions
 -a // displays all files including hidden files
 ls -la // displays all files includig hidden ones and their respective functions.
+
+
+- changing permissions
+__chmod__ 
+changes permissions on files and directories
+user -u
+group -g
+other -o
+
+
+ex:  chmod g-x, o+r access.txt
