@@ -334,7 +334,7 @@ SQL Structured Query Language
 A progaramming language used to create, interact and request information from a database.
 
 Query - request for data from table or combination of tables
-
+`
 SELECT customerid, city, country
 FROM customers
 ORDER BY city;
@@ -351,12 +351,13 @@ ORDER BY country, city;
 SELECT firstname, lastname, title, email
 FROM employees
 WHERE title = 'IT Staff';
+`
 
 *Filtering for patterns*
-    wildcard % and _
+`wildcard % and _
             - percentage sign substitutes for any number of other characters
             - The underscore symbol only substitutes for one other character
-
+`    
     
 
     LIKE operator
