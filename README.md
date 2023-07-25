@@ -365,3 +365,36 @@ LIKE operator
         `SELECT lastname, firstname, title, email
 FROM employees
 WHERE title LIKE 'IT%';`
+
+
+
+BETWEEN is used with AND operator
+`SELECT firstname, lastname, hiredate
+FROM employees
+WHERE hiredate BETWEEN '2002-01-01' AND '2003-01-01';`
+
+
+when we filter for strings, dates, and times, we use quotation marks to specify what we're looking for. However, for numbers, we don't use quotation marks.
+
+
+
+*AND*
+`SELECT firstname, lastname, email, country, supportrepid
+FROM customers
+WHERE supportrepid = 5 AND country = 'USA';
+`
+
+*OR*
+`SELECT firstname, lastname, email, country
+FROM customers
+WHERE country = 'Canada' OR country = 'USA';`
+
+*NOT*
+`SELECT firstname, lastname, email, country
+FROM customers
+WHERE NOT country = 'USA';`
+
+
+`SELECT firstname, lastname, email, country
+FROM customers
+WHERE NOT country = 'Canada' AND NOT country = 'USA';`
