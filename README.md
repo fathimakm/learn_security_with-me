@@ -213,3 +213,18 @@ KALI LINUX, Ubuntu, Parrot - debian based, open source
 
 
 ---
+
+
+### Permissions
+
+rwx
+owner, group, global
+rwxrwxrwx
+
+-rwxrwxrwx //normal file starts with hyphen
+drwxrwxrwx //directory
+
+-l // to display permissions
+ls -l //displays files and their respective permissions
+-a // displays all files including hidden files
+ls -la // displays all files includig hidden ones and their respective functions.
