@@ -360,4 +360,8 @@ WHERE title = 'IT Staff';
 `    
     
 
-    LIKE operator
+LIKE operator
+    to apply wildcards to the filter, you need to use the LIKE operator instead of an equals sign (=). 
+        `SELECT lastname, firstname, title, email
+FROM employees
+WHERE title LIKE 'IT%';`
