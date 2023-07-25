@@ -238,8 +238,32 @@ user -u
 group -g
 other -o
 
-
 ex:  chmod g-x, o+r access.txt
 
 chmod 760 access.txt
 user -rwx, g-rw, o-no access
+
+
+
+- *root user:* A user with high priviliges to modify the system. ( can create, modify, or delete any file and run any program.)(only root user can add new users)
+problems: security issues, accountability, irreversable mistakes.
+
+
+- _sudo_  - A command that temporarily grants elevated permissions to specific users.
+sudo comes from super-user-do and lets you execute commands as an elevated user without having to sign in and out of another account.
+
+ sudoers file - a configuration file to use sudo.
+
+useradd // add a user to the s/m
+sudo useradd abcname
+
+
+userdel // deletes a user
+sudo userdel abcname
+
+-g: Sets the user’s default group, also called their primary group
+sudo useradd -g security abc1 // adds a new user abc1 and assigns their primary group to be security
+
+
+-G: Adds the user to additional groups, also called supplemental or secondary groups
+sudo useradd -G finance,admin abc1 //  adds a new user and adds them to the existing finance and admin groups.
