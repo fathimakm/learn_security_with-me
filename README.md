@@ -743,11 +743,106 @@ sha256sum newfile.txt
 
 
 - to move hash value of a1.txt to a1file
-`sha256sum a1.txt >> a1file
+`sha256sum a1.txt >> a1filehash
 
-sha256sum a2.txt >> a2file
+sha256sum a2.txt >> a2filehash
 
 to compare both 
 use cmp
-cmp a1file a2file`
+cmp a1filehash a2filehash`
+
+****
+ ## Acess Control
+
+  The security controls that manage access, authorization, and accountability of information
+
+ __AAA Framework__
+ These systems are commonly broken down into three separate, yet related functions known as the __authentication, authorization, and accounting__ framework. Each control has its own protocol and systems that make them work. 
+
+1. **Authentication**
+ - The three factors of **authentication are: characteristic, ownership, and knowledge**. Ownership is used to verify a user's identity using something the user possesses, like a one-time passcode 
+
+ - __SSO__, is a technology that combines several different logins into one.
+        SSO technology is great, but not if it relies on just a single factor of authentication. Adding more authentication factors strengthen these systems.
+        - __Multi-factor authentication__, or MFA, is a security measure, which requires a user to verify their identity in two or more ways to access a system or network. MFA combines two or more independent credentials, like knowledge and ownership, to prove that someone is who they claim to be.
+            - SSO and MFA are often used in conjunction with one another to layer the defense capabilities of authentication systems. When both are used, organizations can ensure convenient access that is also secure.
+
+    - SSO solutions use trusted third-parties to prove that a user is who they claim to be. This is done through the exchange of encrypted access tokens between the identity provider and the service provider.
+    - SSO implementations commonly rely on two different authentication protocols: LDAP and SAML. LDAP, which stands for Lightweight Directory Access Protocol, is mostly used to transmit information on-premises; SAML, which stands for Security Assertion Markup Language, is mostly used to transmit information off-premises, like in the cloud.
+        - LDAP and SAML protocols are often used together
+
+
+    - three factors (3FA) to authenticate their identification
+                Something a user knows: most commonly a username and password
+
+                Something a user has: normally received from a service provider, like a one-time passcode (OTP) sent via SMS
+
+                Something a user is: refers to physical characteristics of a user, like their fingerprints or facial scans
+
+2. **Authorization**
+
+Authorization controls are linked to the *separation of duties and the principle of least privilege.* 
+
+__principle of least privilege__ in which a user is only granted the minimum level of access and authorization required to complete a task or function.
+
+__Separation of duties__ is the principle that users should not be given levels of authorization that will allow them to misuse a system. Separating duties reduces the risk of system failures and inappropriate behavior from users.
+
+
+*frequently used access controls* - __HTTP basic auth and OAuth.__
+
+1. HTTP basic auth-  It stands for hypertext transfer protocol, which is how communications are established over network. HTTP uses what is known as basic auth, the technology used to establish a user's request to access a server. Basic auth works by sending an identifier every time a user communicates with a web page. ( vulnerable to attacks because it transmits usernames and password openly over the network)
+    - Most websites today use HTTPS instead, which stands for hypertext transfer protocol secure. This protocol doesn't expose sensitive information, like access credentials, when communicating over the network.
+
+2. OAuth is an open-standard authorization protocol that shares designated access between applications. For example, you can tell Google that it's okay for another website to access your profile to create an account. Instead of requesting and sending sensitive usernames and passwords over the network, OAuth uses API tokens to verify access between you and a service provider.
+
+*API token is a small block of encrypted code that contains information about a user. These tokens contain things like your identity, site permissions, and more.*
+
+- OAuth sends and receives access requests using API tokens by passing them from a server to a user's device.
+- API tokens serve as an additional layer of encryption that helps to keep your Google password safe in the event of a breach on another platform.
+- Basic auth and OAuth are just a couple of examples of authorization tools that are designed with the principles of least privilege and separation of duty in mind.
+
+3. **Accounting**
+
+- Accounting is the practice of monitoring the access logs of a system. These logs contain information like who accessed the system, and when they accessed it, and what resources they used.
+
+- helpful way to identify trends, like failed login attempts.
+
+- used to uncover hackers who have gained access to a system, and for detecting an incident, like a data breach.
+
+- Anytime a user accesses a system, a session is initiated. 
+        - A session is a sequence of network HTTP basic auth requests and responses associated with the same user, like when you visit a website. Access logs are essentially records of sessions that capture the moment a user enters a system until the moment they leave it.
+- Two actions are triggered when the session begins. 
+    1. The first is the creation of a session ID. A session ID is a unique token that identifies a user and their device while accessing the system. Session IDs are attached to the user until they either close their browser or the session times out.
+    2. The second action that takes place at the start of a session is an exchange of session cookies between a server and a user's device. A session cookie is a token that websites use to validate a session and determine how long that session should last. When cookies are exchanged between your computer and a server, your session ID is read to determine what information the website should show you.
+
+- Cookies make web sessions safer and more efficient. The exchange of tokens means that no sensitive information, like usernames and passwords, are shared. Session cookies prevent attackers from obtaining sensitive data.
+
+- However, there's other damage that they can do. With a stolen cookie, an attacker can impersonate a user using their session token. This kind of attack is known as session hijacking.
+    - *Session hijacking* is an event when attackers obtain a legitimate user's session ID. During these kinds of attacks, cyber criminals impersonate the user, causing all sorts of harm. Money or private data can be stolen. If, for example, hijackers obtain a single sign-on credential from stolen cookies, they can even gain access to additional systems that otherwise seem secure.
+
+
+**Identity and access management (IAM)** is a collection of processes and technologies that helps organizations manage digital identities in their environment. Both AAA and IAM systems are designed to authenticate users, determine their access privileges, and track their activities within a system.
+
+- *User provisioning* is the process of creating and maintaining a user's digital identity. For example, a college might create a new user account when a new instructor is hired. The new account will be configured to provide access to instructor-only resources while they are teaching. Security analysts are routinely involved with provisioning users and their access privileges.
+
+***
+
+If the right user has been authenticated, the network should ensure the right resources are made available. There are ***three common frameworks*** that organizations use to handle this step of ***IAM***:
+
+1. Mandatory access control (MAC)
+
+    MAC is the strictest of the three frameworks. Authorization in this model is based on a strict need-to-know basis. Access to information must be granted manually by a central authority or system administrator. For example, MAC is commonly applied in law enforcement, military, and other government agencies where users must request access through a chain of command. MAC is also known as non-discretionary control because access isn’t given at the discretion of the data owner.
+
+
+
+2. Discretionary access control (DAC)
+
+    DAC is typically applied when a data owner decides appropriate levels of access. One example of DAC is when the owner of a Google Drive folder shares editor, viewer, or commentor access with someone else.
+
+
+
+3. Role-based access control (RBAC)
+
+    RBAC is used when authorization is determined by a user's role within an organization. For example, a user in the marketing department may have access to user analytics but not network administration.
+
 
