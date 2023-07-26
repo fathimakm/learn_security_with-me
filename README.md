@@ -157,10 +157,11 @@ KALI LINUX, Ubuntu, Parrot - debian based, open source
     expr
     clear
 
-    cat command displays the content of a file
-    head command displays just the beginning of a file, by default 10 lines
-    tail command can be used to display just the end of a file, by default 10 lines
-    less command returns the content of a file one page at a time. 
+    __cat__ command displays the content of a file
+    cat access.txt
+    __head__ command displays just the beginning of a file, by default 10 lines
+    __tail__ command can be used to display just the end of a file, by default 10 lines
+    __less__ command returns the content of a file one page at a time. 
 
      The __grep__ command searches a specified file and returns all lines in the file containing a specified string. The grep command commonly takes two arguments: a specific string to search for and a specific file to search through. (grep OS updates.txt returns all lines containing OS in the updates.txt file. )
 
@@ -678,3 +679,75 @@ Digital Certificate - a file that verifies the identity of a public key holder.
 - OpenSSL, which is an open-source command line tool that can be used to generate public and private keys. 
 
 - OpenSSL is commonly used by computers to verify digital certificates that are exchanged as part of public key infrastructure.
+
+
+***
+## Hashing
+
+- A __hash function__ is an algorithm that produces a code that can't be decrypted. 
+
+- Unlike asymmetric and symmetric algorithms, hash functions are one-way processes that do not generate decryption keys. 
+
+- Instead, these algorithms produce a unique identifier known as a hash value, or digest.
+
+- In security, hashes are primarily used as a way to determine the __integrity of files and applications__.
+
+Hashing algorithm - __sha256__ (commonly used)
+sha256sum newfile.txt
+
+
+ (__VirusTotal__ This is a popular tool among security practitioners that's useful for analyzing suspicious files, domains, IPs, and URLs.)
+
+
+
+ __MD5__ works by converting data into a 128-bit value
+
+ In a hash table, this appears as a string of 32 characters. Altering anything in the source file generates an entirely new hash value.
+
+  **flaws in MD5** happens to be a characteristic of all hash functions. Hash algorithms map any input, regardless of its length, into a fixed-size value of letters and numbers
+
+  - MD5 values are limited to 32 characters in length. Due to the limited output size, the algorithm is considered to be vulnerable to hash collision, an instance when different inputs produce the same hash value. 
+  - Because hashes are used for authentication, a hash collision is similar to copying someone’s identity.
+  - Attackers can carry out collision attacks to fraudulently impersonate authentic data.
+
+  - MD5's shortcomings gave way to a new group of functions known as the **Secure Hashing Algorithms, or SHAs.**
+
+  -Except for SHA-1, which produces a 160-bit digest, these algorithms are considered to be collision-resistant. However, that doesn’t make them invulnerable to other exploits.
+
+  - Five functions make up the SHA family of algorithms:
+   ` SHA-1
+
+    SHA-224
+
+    SHA-256
+
+    SHA-384
+
+    SHA-512 `
+
+
+- __rainbow table__ is a file of pre-generated hash values and their associated plaintext.
+- They’re like dictionaries of weak passwords.
+- Attackers capable of obtaining an organization’s password database can use a rainbow table to compare them against all possible values.
+
+
+- Functions with larger digests are less vulnerable to collision and rainbow table attacks.
+
+- __Salting__ is an additional safeguard that's used to strengthen hash functions. A salt is a random string of characters that's added to data before it's hashed. The additional characters produce a more unique hash value, making salted data resilient to rainbow table attacks.
+
+- For example, a database containing passwords might have several hashed entries for the password "password." If those passwords were all salted, each entry would be completely different. That means an attacker using a rainbow table would be unable to find matching values for "password" in the database.
+- the longer and more complex a salt is, the harder it is to crack.
+
+
+***
+
+
+- to move hash value of a1.txt to a1file
+`sha256 a1.txt >> a1file
+
+sha256 a2.txt >> a2file
+
+to compare both 
+use cmp
+cmp a1file a2file`
+
