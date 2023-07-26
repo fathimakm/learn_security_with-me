@@ -560,3 +560,22 @@ Analyze and prioritize existing gaps in security operations that place the busin
 Implement a plan of action to achieve your organization’s goals and objectives.
 
 Always consider current risk, threat, and vulnerability trends when using the NIST CSF. 
+
+***
+**Security controls**
+
+ safeguards designed to reduce specific security risks.
+ They include a wide range of tools that protect assets before, during, and after an event.
+
+ security controls are technical, operational, and managerial. Each type of security control plays a key role in effective information privacy.
+
+ 1. The principle of least privilege is a security control in which a user is only granted the minimum level of access and authorization required to complete a task or function.
+
+
+ * There are three common approaches to auditing user accounts:
+
+Usage audits
+
+Privilege audits
+
+Account change audits
