@@ -459,11 +459,21 @@ WHERE country = 'USA';`
 ***************
 
 ## Risk and Assets
- Risk: Anything that can impact the confidentiality, integrity, or availability of an asset
+ - Risk: Anything that can impact the confidentiality, integrity, or availability of an asset
+    * Likelihood: Score from 1-3 of the chances of a vulnerability being exploited. A 1 means there's a low
+    likelihood, a 2 means there's a moderate likelihood, and a 3 means there's a high likelihood.
+    * Severity: Score from 1-3 of the potential damage the threat would cause to the business. A 1 means a
+    low severity impact, a 2 is a moderate severity impact, and a 3 is a high severity impact.
+    * Priority: How quickly a risk should be addressed to avoid the potential incident. Use the following
+    formula to calculate the overall score: Likelihood x Impact Severity = Risk
 
-Threat: Any circumstance or event that can negatively impact assets
+ **Likelihood x Impact = Risk**
 
-Vulnerability: A weakness that can be exploited by a threat
+- Threat: Any circumstance or event that can negatively impact assets
+
+- Vulnerability: A weakness that can be exploited by a threat
+
+- **data in use, in transit, or at rest.**
 
 
 - Asset management is the process of tracking assets and the risks that affect them. The idea behind this process is simple: you can only protect what you know you have. 
@@ -506,6 +516,8 @@ __Cloud security is a growing subfield of cybersecurity that specifically focuse
 __Elements of security plan__
 Three basic elements: policies, standards, and procedures.  
 
+Security plans address risks such as damage to assets, loss of information, and disclosure of data. Shifting market conditions are a reality of doing business in an open market that is not addressed by security plans.
+
 __NIST Cybersecurity Framework (CSF)__
 - voluntary framework that consists of standards, guidelines, and best practices to manage cybersecurity risk.
 
@@ -528,3 +540,15 @@ Used to understand ways to detect attacks and develop response and recovery plan
 
 **Compliance is the process of adhering to internal standards and external regulations**
  compliance is a way of measuring how well an organization is protecting their assets.
+
+__Guidance that any organization can use to implement the CSF.__**
+
+Create a current profile of the security operations and outline the specific needs of your business.
+
+Perform a risk assessment to identify which of your current operations are meeting business and regulatory standards.
+
+Analyze and prioritize existing gaps in security operations that place the businesses assets at risk.
+
+Implement a plan of action to achieve your organization’s goals and objectives.
+
+Always consider current risk, threat, and vulnerability trends when using the NIST CSF. 
