@@ -579,3 +579,102 @@ Usage audits
 Privilege audits
 
 Account change audits
+
+
+__The data Lifecycle__
+ the data lifecycle has five stages. Each describe how data flows through an organization from the moment it is created until it is no longer useful:
+    -Collect
+    -Store
+    -Use
+    -Archive
+    -Destroy
+
+__Data governance__
+- set of processes that define how an organization manages information.
+- specifies how to keep data private, accurate, available, and secure throughout its lifecycle.
+
+Data owner: the person that decides who can access, edit, use, or destroy their information.
+
+Data custodian: anyone or anything that's responsible for the safe handling, transport, and storage of information.
+
+Data steward: the person or group that maintains and implements data governance policies set by an organization.
+
+
+__Type of Information__
+__PII__ is any information used to infer an individual's identity. Personally identifiable information, or PII, refers to information that can be used to contact or locate someone.
+
+__PHI__ stands for protected health information.  In the U.S., it is regulated by the Health Insurance Portability and Accountability Act (HIPAA), which defines PHI as “information that relates to the past, present, or future physical or mental health or condition of an individual.” In the EU, PHI has a similar definition but it is regulated by the General Data Protection Regulation (GDPR).
+
+__SPII__ is a specific type of PII that falls under stricter handling guidelines. The S stands for sensitive, meaning this is a type of personally identifiable information that should only be accessed on a need-to-know basis, such as a bank account number or login credentials.
+
+
+***
+
+A __security audit__ is a review of an organization's security controls, policies, and procedures against a set of expectations.
+
+A __security assessment__ is a check to determine how resilient current security implementations are against threats.
+
+***
+
+## Cryptography
+
+The process of transforming information into a form that unintended readers can't understand.In cryptography, a __cipher__ is used to hide, or encrypt information.
+
+Cryptographic __Key__ - A mechanism that decrypts ciphertext
+
+- __Brute Force attack__ - A trial and error process of discovering private information
+
+-  caesor cipher
+not used because of its limitations (relies on single key)
+
+- __Public Key Infrastructure__
+An encryption framework that secures the exchange of information online.
+makes access of information fast, easy, secure
+
+- it is a two step proccess
+1. exchange of encrypted information (this involves symmetric encryption, asymmetric encryption or both)
+
+**Asymmetric Encryption** 
+The use of a public key and a private key for encryption and decryption of data.
+
+
+**Symmetric Encryption**  (faster and simpler)
+Uses a single secret key to exchange information, but less secure
+
+Public key infrastructure uses both encryption and sometimes together depending on whether speed or security is the priority.
+
+2. PKI addresses the vulnerability of key sharing by establishing trust using a system of digital certificates between computers and network.
+
+A digital certificate binds the data's public key to the verified identity of a website, individual, organization, device, or server.
+
+
+Digital Certificate - a file that verifies the identity of a public key holder.
+
+**Approved Algolithms**
+*Symmetric Algorithm*
+1. Triple DES (3DES) is known as a block cipher because of the way it converts plaintext into ciphertext in “blocks.” 
+    - Triple DES generates keys that are 192 bits, or three times as long.
+    - limitations on the amount of data that can be encrypted. 
+
+2. Advanced Encryption Standard (AES) is one of the most secure symmetric algorithms today. AES generates keys that are 128, 192, or 256 bits. 
+
+    + Cryptographic keys of this size are considered to be safe from brute force attacks.
+
+    - It’s estimated that brute forcing an AES 128-bit key could take a modern computer billions of years!
+
+*Asymmetric algorithms*
+
+1.  RSA is one of the first asymmetric encryption algorithms that produces a public and private key pair. 
+    - Asymmetric algorithms like RSA produce even longer key lengths. In part, this is due to the fact that these functions are creating two keys. RSA key sizes are 1,024, 2,048, or 4,096 bits. 
+
+    - RSA is mainly used to protect highly sensitive data.
+2. Digital Signature Algorithm (DSA) is a standard asymmetric algorithm that was introduced by NIST
+
+-  DSA also generates key lengths of 2,048 bits. This algorithm is widely used today as a complement to RSA in public key infrastructure.
+
+
+**Generating keys**
+
+- OpenSSL, which is an open-source command line tool that can be used to generate public and private keys. 
+
+- OpenSSL is commonly used by computers to verify digital certificates that are exchanged as part of public key infrastructure.
