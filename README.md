@@ -440,3 +440,67 @@ SUM returns a single number that represents the sum of the numerical data in a c
 `SELECT COUNT(firstname)
 FROM customers
 WHERE country = 'USA';`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+***************
+
+## Risk and Assets
+ Risk: Anything that can impact the confidentiality, integrity, or availability of an asset
+
+Threat: Any circumstance or event that can negatively impact assets
+
+Vulnerability: A weakness that can be exploited by a threat
+
+
+- Asset management is the process of tracking assets and the risks that affect them. The idea behind this process is simple: you can only protect what you know you have. 
+
+
+Restricted is the highest level. This category is reserved for incredibly sensitive assets,  like need-to-know information.
+
+Confidential refers to assets whose disclosure may lead to a significant negative impact on an organization.
+
+Internal-only describes assets that are available to employees and business partners.
+
+Public is the lowest level of classification. These assets have no negative consequences to the organization if they’re released.
+
+
+
+__cloud computing as, “An on-demand, massively scalable service, hosted on shared infrastructure, accessible via the internet.__
+
+- There are three main categories of cloud-based services:
+
+Software as a service (SaaS) - front-end applications that users access via a web browse
+
+Platform as a service (PaaS) - back-end application development tools that clients can access online.
+
+Infrastructure as a service (IaaS) - remote access to a range of back-end systems that are hosted by the cloud service provider. This includes data processing servers, storage, networking resources, and more
+
+__Cloud security is a growing subfield of cybersecurity that specifically focuses on the protection of data, applications, and infrastructure in the cloud.__
+
+        
+    Cloud security challenges
+            Misconfiguration is one of the biggest concerns. Customers of cloud-based services are responsible for configuring their own security environment. Oftentimes, they use out-of-the-box configurations that fail to address their specific security objectives.
+
+            Cloud-native breaches are more likely to occur due to misconfigured services.
+
+            Monitoring access might be difficult depending on the client and level of service.
+
+            Meeting regulatory standards is also a concern, particularly in industries that are required by law to follow specific requirements such as HIPAA, PCI DSS, and GDPR
+
+    
+__NIST Cybersecurity Framework (CSF)__
+    The five NIST Cybersecurity Framework (CSF) core functions are identify, protect, detect, respond, and recover. The core is a simplified version of the functions or duties of a security plan. Think of these functions as a checklist for reducing security risk.
