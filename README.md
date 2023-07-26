@@ -502,5 +502,29 @@ __Cloud security is a growing subfield of cybersecurity that specifically focuse
             Meeting regulatory standards is also a concern, particularly in industries that are required by law to follow specific requirements such as HIPAA, PCI DSS, and GDPR
 
     
+
+__Elements of security plan__
+Three basic elements: policies, standards, and procedures.  
+
 __NIST Cybersecurity Framework (CSF)__
-    The five NIST Cybersecurity Framework (CSF) core functions are identify, protect, detect, respond, and recover. The core is a simplified version of the functions or duties of a security plan. Think of these functions as a checklist for reducing security risk.
+- voluntary framework that consists of standards, guidelines, and best practices to manage cybersecurity risk.
+
++ flexible and can be applied to any industry.
+
+
+1. __core__
+- Three main components of NIST CSF : `the core, tiers, and profiles`
+
+` The five NIST Cybersecurity Framework (CSF) core functions are identify, protect, detect, respond, and recover. `
+
+The core is a simplified version of the **functions or duties of a security plan**. Think of these functions as a checklist for reducing security risk.
+Used to understand ways to detect attacks and develop response and recovery plans should an attack happen.
+
+2. __Tiers__
+- The CSF tiers are a way of **measuring the sophistication of an organization's cybersecurity program**. CSF tiers are measured on a scale of 1 to 4. Tier 1 is the lowest score, indicating that a limited set of security controls have been implemented. Overall, CSF tiers are used to assess an organization's security posture and identify areas for improvement.
+
+3. __Profiles__
+- The CSF profiles are **pre-made templates** of the NIST CSF that are developed by a team of industry experts. CSF profiles are tailored to address the specific risks of an organization or industry. They are used to help organizations develop a baseline for their cybersecurity plans, or as a way of comparing their current cybersecurity posture to a specific industry standard.
+
+**Compliance is the process of adhering to internal standards and external regulations**
+ compliance is a way of measuring how well an organization is protecting their assets.
