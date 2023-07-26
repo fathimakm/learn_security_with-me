@@ -743,9 +743,9 @@ sha256sum newfile.txt
 
 
 - to move hash value of a1.txt to a1file
-`sha256 a1.txt >> a1file
+`sha256sum a1.txt >> a1file
 
-sha256 a2.txt >> a2file
+sha256sum a2.txt >> a2file
 
 to compare both 
 use cmp
