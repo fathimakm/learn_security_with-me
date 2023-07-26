@@ -473,10 +473,18 @@ WHERE country = 'USA';`
 
 - Vulnerability: A weakness that can be exploited by a threat
 
-- **data in use, in transit, or at rest.**
+- **States of data : data in use, in transit, or at rest.**
+    Data: Information that is translated, processed, or stored by a computer
 
+    Data at rest: Data not currently being accessed
 
-- Asset management is the process of tracking assets and the risks that affect them. The idea behind this process is simple: you can only protect what you know you have. 
+    Data in transit: Data traveling from one point to another
+
+    Data in use: Data being accessed by one or more users
+
+- **Information security (InfoSec)**: The practice of keeping data in all states away from unauthorized users
+
+- __Asset management__ is the process of tracking assets and the risks that affect them. The idea behind this process is simple: you can only protect what you know you have. 
 
 
 Restricted is the highest level. This category is reserved for incredibly sensitive assets,  like need-to-know information.
