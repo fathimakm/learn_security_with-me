@@ -846,3 +846,335 @@ If the right user has been authenticated, the network should ensure the right re
     RBAC is used when authorization is determined by a user's role within an organization. For example, a user in the marketing department may have access to user analytics but not network administration.
 
 
+
+
+*****
+
+## Vulnerabilities
+
+* Vulnerability - A weakness that can be exploited by a threat.
+* exploit - taking advantage of a vulnerability
+- Threat - any circumstance or event that can negactively impact assets.
+* exposure - a mistake that can be exploited by threat
+
++ vulnerability management- process of finding and patching vulnerability
+            1. identify vulnerabilities
+            2. consider potential exploites
+            3. prepare defenses against threats
+            4. evaluate those defenses
+
+
+- Zero day Expolit - an explot that was previously unknown (the term zero means that it's happening in real time with zero days to fix it)
+
+
+
+* Defense in depth - A **layered approach** to vulnerability management that reduces risk (known as castle approach because it resembles the layered defenses of a castle)
+        layers: perimeter layer, network layer, endpoint layer, application layer, data layer
+
+
+* *One of the most popular libraries of vulnerabilities and exposures is the CVE list*. The common vulnerabilities and exposures list, or CVE list, is an openly accessible dictionary of known vulnerabilities and exposures. It is a popular resource.
+
+   
+
+    - The main purpose of the CVE list is to offer a standard way of identifying and categorizing known vulnerabilities and exposures. 
+    
+    - Most CVEs in the list are reported by independent researchers, technology vendors, and ethical hackers, but anyone can report one. Before a CVE can make it onto the CVE list, it first goes through a strict review process by a CVE Numbering Authority, or CNA.
+
+     - CVE LIST CRITERIA
+            independent of other issues, recognized as a potential security risk, submitted with supporting evidence, only affect one codebase
+
+    - The NIST National Vulnerabilities Database uses what's known as the common vulnerability scoring system, or CVSS, which is a measurement system that scores the severity of a vulnerability.
+
+    - Security teams use CVSS as a way of calculating the impact a vulnerability could have on a system. They also use them to determine how quickly a vulnerability should be patched.
+
+
+    - CVSS that scores below a 4.0 is considered to be low risk and doesn't require immediate attention. However, anything above a 9.0 is considered to be a critical risk to company assets that should be addressed right away.
+
+
+-__Vulnerability scanner__: Software that automatically compares existing common vulnerabilities and exposures against the technologies on the network
+
+*****
+
+## OWASP 
+
+
+__OWASP__ is a nonprofit foundation that works to improve the security of software. OWASP is an open platform that security professionals from around the world use to share information, tools, and events that are focused on securing the web.
+
+### The OWASP Top 10
+One of OWASP’s most valuable resources is the OWASP Top 10. The organization has published this list since 2003 as a way to spread awareness of the web’s most targeted vulnerabilities. The Top 10 mainly applies to new or custom made software. Many of the world's largest organizations reference the OWASP Top 10 during application development to help ensure their programs address common security mistakes.
+
+Pro tip: OWASP’s Top 10 is updated every few years as technologies evolve. Rankings are based on how often the vulnerabilities are discovered and the level of risk they present.
+
+Note: Auditors also use the OWASP Top 10 as one point of reference when checking for regulatory compliance.
+
+- Common vulnerabilities
+Businesses often make critical security decisions based on the vulnerabilities listed in the OWASP Top 10. This resource influences how businesses design new software that will be on their network, unlike the CVE® list, which helps them identify improvements to existing programs. These are the most regularly listed vulnerabilities that appear in their rankings to know about:
+
+1. Broken access control
+Access controls limit what users can do in a web application. For example, a blog might allow visitors to post comments on a recent article but restricts them from deleting the article entirely. Failures in these mechanisms can lead to unauthorized information disclosure, modification, or destruction. They can also give someone unauthorized access to other business applications.
+
+2. Cryptographic failures
+Information is one of the most important assets businesses need to protect. Privacy laws such as General Data Protection Regulation (GDPR) require sensitive data to be protected by effective encryption methods. Vulnerabilities can occur when businesses fail to encrypt things like personally identifiable information (PII). For example, if a web application uses a weak hashing algorithm, like MD5, it’s more at risk of suffering a data breach.
+
+3. Injection
+Injection occurs when malicious code is inserted into a vulnerable application. Although the app appears to work normally, it does things that it wasn’t intended to do. Injection attacks can give threat actors a backdoor into an organization’s information system. A common target is a website’s login form. When these forms are vulnerable to injection, attackers can insert malicious code that gives them access to modify or steal user credentials. 
+
+4. Insecure design
+Applications should be designed in such a way that makes them resilient to attack. When they aren’t, they’re much more vulnerable to threats like injection attacks or malware infections. Insecure design refers to a wide range of missing or poorly implemented security controls that should have been programmed into an application when it was being developed.
+
+5. Security misconfiguration
+Misconfigurations occur when security settings aren’t properly set or maintained. Companies use a variety of different interconnected systems. Mistakes often happen when those systems aren’t properly set up or audited. A common example is when businesses deploy equipment, like a network server, using default settings. This can lead businesses to use settings that fail to address the organization's security objectives.
+
+6. Vulnerable and outdated components
+Vulnerable and outdated components is a category that mainly relates to application development. Instead of coding everything from scratch, most developers use open-source libraries to complete their projects faster and easier. This publicly available software is maintained by communities of programmers on a volunteer basis. Applications that use vulnerable components that have not been maintained are at greater risk of being exploited by threat actors.
+
+7. Identification and authentication failures
+Identification is the keyword in this vulnerability category. When applications fail to recognize who should have access and what they’re authorized to do, it can lead to serious problems. For example, a home Wi-Fi router normally uses a simple login form to keep unwanted guests off the network. If this defense fails, an attacker can invade the homeowner’s privacy.
+
+8. Software and data integrity failures
+Software and data integrity failures are instances when updates or patches are inadequately reviewed before implementation. Attackers might exploit these weaknesses to deliver malicious software. When that occurs, there can be serious downstream effects. Third parties are likely to become infected if a single system is compromised, an event known as a supply chain attack.
+
+- A famous example of a supply chain attack is the 
+    SolarWinds cyber attack (2020)
+    where hackers injected malicious code into software updates that the company unknowingly released to their customers.
+
+9. Security logging and monitoring failures
+In security, it’s important to be able to log and trace back events. Having a record of events like user login attempts is critical to finding and fixing problems. Sufficient monitoring and incident response is equally important.
+
+10. Server-side request forgery
+Companies have public and private information stored on web servers. When you use a hyperlink or click a button on a website, a request is sent to a server that should validate who you are, fetch the appropriate data, and then return it to you.
+
+Server-side request forgeries (SSRFs) are when attackers manipulate the normal operations of a server to read or update other resources on that server. These are possible when an application on the server is vulnerable. Malicious code can be carried by the vulnerable app to the host server that will fetch unauthorized data.
+
+
+
+
+
+
+OSINT is the collection and analysis of information from publicly available sources to generate usable intelligence. It's commonly used to support cybersecurity activities, like identifying potential threats and vulnerabilities. 
+
+
+
+
+*****
+
+## How to find Vulnerability
+
+__vulnerability Assessment__ -  internal review process of an organization's security systems. These assessments work similar to the process of identifying and categorizing vulnerabilities on the CVE list. The main difference is the organization's security team performs, evaluates, scores, and fixes them on their own.
+
+- The goal of a vulnerability assessment is to identify weak points and prevent attacks.
+
+- Once they decide what to focus on, vulnerability assessments typically follow a four-step process
+
+    1. Identification
+    2. Vulnerability analysis
+    3. Risk Assessment
+    4. Remediation (vulnerabilities that can impact the organization are addressed)
+
+
+   - A vulnerability scanner is software that automatically compares known vulnerabilities and exposures against the technologies on the network
+
+
+   - A __patch update__ is a software and operating system update that addresses security vulnerabilities within a program or product. Patches usually contain bug fixes that address common security vulnerabilities and exposures.
+
+    patches address common vulnerabilities and exposures before malicious hackers find them. However, patches are sometimes developed as a result of a zero-day, which is an exploit that was previously unknown.
+
+    - __End of Life__
+    All software has a lifecycle. It begins when it’s produced and ends when a newer version is released. At that point, developers must allocate resources to the newer versions, which leads to EOL software. While the older software is still useful, the manufacturer no longer supports it. 
+
+
+
+    ******
+
+    # Penetration Testing
+
+    A penetration test, or pen test, is a simulated attack that helps identify vulnerabilities in systems, networks, websites, applications, and processes. The simulated attack in a pen test involves using the same tools and techniques as malicious actors in order to mimic a real life attack. Since a pen test is an authorized attack, it is considered to be a form of ethical hacking. Unlike a vulnerability assessment that finds weaknesses in a system's security, a pen test exploits those weaknesses to determine the potential consequences if the system breaks or gets broken into by a threat actor.
+
+
+1. Red team tests simulate attacks to identify vulnerabilities in systems, networks, or applications.
+
+2. Blue team tests focus on defense and incident response to validate an organization's existing security systems.
+
+3. Purple team tests are collaborative, focusing on improving the security posture of the organization by combining elements of red and blue team exercises.
+
+
+## common penetration testing strategies: 
+
+ __Open-box testing__ is when the tester has the same privileged access that an internal developer would have—information like system architecture, data flow, and network diagrams. This strategy goes by several different names, including internal, full knowledge, white-box, and clear-box penetration testing.
+
+__Closed-box testing__ is when the tester has little to no access to internal systems—similar to a malicious hacker. This strategy is sometimes referred to as external, black-box, or zero knowledge penetration testing.  (Closed box testers tend to produce the most accurate simulations of a real-world attack)
+
+__Partial knowledge testing__ is when the tester has limited access and knowledge of an internal system—for example, a customer service representative. This strategy is also known as gray-box testing.
+
+
+***
+
+__An attack surface__ is all the potential vulnerabilities that a threat actor could exploit. Analyzing the attack surface is usually the first thing security teams do.
+
+The __digital attack surface__ includes everything that's beyond our organization's firewall. In other words, it includes anything that connects to an organization online.
+
+***
+
+*Simulating threats*
+One method of applying an attacker mindset is using attack simulations. These activities are normally performed in one of two ways: proactively and reactively. Both approaches share a common goal, which is to make systems safer.
+
+1. Proactive simulations assume the role of an attacker by exploiting vulnerabilities and breaking through defenses. This is sometimes called a red team exercise.
+
+2. Reactive simulations assume the role of a defender responding to an attack. This is sometimes called a blue team exercise.
+***
+
+__Threat actors__(5 categories)
+
+A threat actor is any person or group who presents a security risk. This broad definition refers to people inside and outside an organization. It also includes individuals who intentionally pose a threat, and those that accidentally put assets at risk.
+
+
+1. Competitors refers to rival companies who pose a threat because they might benefit from leaked information.
+
+2. State actors are government intelligence agencies.
+
+3. Criminal syndicates refer to organized groups of people who make money from criminal activity.
+
+4. Insider threats can be any individual who has or had authorized access to an organization’s resources. This includes employees who accidentally compromise assets or individuals who purposefully put them at risk for their own benefit.
+
+5. Shadow IT refers to individuals who use technologies that lack IT governance. A common example is when an employee uses their personal email to send work-related communications.
+
+
+***
+
+
+__Types of hackers__
+
+1. Unauthorized hackers (an individual who uses their programming skills to commit crimes. )
+
+2. Authorized, or ethical, hackers(individuals who use their programming skills to improve an organization's overall security. )
+
+3. Semi-authorized hackers (individuals who might violate ethical standards, but are not considered malicious. )
+
+***
+
+- __An advanced persistent threat (APT)__ refers to instances when a threat actor maintains unauthorized access to a system for an extended period of time. 
+
+__Attack Vector__ - The pathways attacker use to penetrate security defenses
+
+__Attack tree__: A diagram that maps threats to assets
+*****
+
+ ## brute force attacks
+
+
+ 1. Simple brute force attacks are an approach in which attackers guess a user's login credentials. They might do this by entering any combination of username and password that they can think of until they find the one that works.
+
+ 2. Dictionary attacks are a similar technique except in these instances attackers use a list of commonly used credentials to access a system. This list is similar to matching a definition to a word in a dictionary.
+
+3. Reverse brute force attacks are similar to dictionary attacks, except they start with a single credential and try it in various systems until a match is found.
+
+4. Credential stuffing is a tactic in which attackers use stolen login credentials from previous data breaches to access user accounts at another organization. A specialized type of credential stuffing is called pass the hash. These attacks reuse stolen, unsalted hashed credentials to trick an authentication system into creating a new authenticated user session on the network.\
+
+5. encrypted information can sometimes be brute forced using a technique known as exhaustive key search.
+
+* common brute forcing tools:
+Aircrack-ng (to test a Wi-Fi network for vulnerabilities to brute force attack.)
+Hashcat 
+John the Ripper
+Ophcrack
+THC Hydra
+
+
+* Prevention measures:
+Hashing and salting
+Multi-factor authentication (MFA)
+CAPTCHA
+Password policies(standard good password practices )
+
+
+
+
+*****
+
+
+- __Social engineering__ is a manipulation technique that exploits human error to gain private information, access, or valuables.
+
+__stages__: 
+prepare
+establish trust
+use persuation tactics
+disconnect from the target
+
+
+__prevention__:
+implementing mangerial controls
+staying informed of trends
+sharing knowledge with others
+
+
+__Signs of an attack__:
+- baiting (example is USB baiting that relies on someone finding an infected USB drive and plugging it into their device.)
+
+
+- phishing ( to trick people into revealing sensitive data or deploying malicious software. It is one of the most common forms of social engineering, typically performed via email.)
+
+
+- quid pro quo (used to trick someone into believing that they’ll be rewarded in return for sharing access, information, or money)
+
+
+- Tailgating is a social engineering tactic in which unauthorized people follow an authorized person into a restricted area. This technique is also sometimes referred to as piggybacking.
+
+
+- watering hole- a type of attack when a threat actor compromises a website frequently visited by a specific group of users. Oftentimes, these watering hole sites are infected with malicious software. An example is the Holy Water attack of 2020 that infected various religious, charity, and volunteer websites.
+
+***
+**Phishing**
+
+phishing Kit - a collection of software tools needed to launch a phishing campaign
+
+3 main tools that are found inside a phishing kit
+* malicious attachments
+* fake data- collection forms
+* fraudulent web links
+
+__forms of phishing__:
+
+* Email phishing
+
+* smishing - the use of text messages to obtain sensitive info or to inpersonate a known source.
+
+* vishing - the expolitation of electronic voice communication to obtain sensitive information or impersonate a known source
+
+* Spear phishing is a subset of email phishing in which specific people are purposefully targeted  such as the accountants of a small business.
+
+    * Whaling refers to a category of spear phishing attempts that are aimed at high-ranking executives in an organization.
+
+*  Angler phishing is a technique where attackers impersonate customer service representatives on social media. (evolved in the 2010)
+They then trick the angry customers into sharing sensitive information with the promise of fixing their problem.
+
+
+****
+####  Malware
+Malware is software designed to harm devices or networks. Malware, which is short for malicious software, can be spread in many ways. For example, it can be spread through an infected USB drive. Or also commonly spread between computers online.
+
+
+**types of malware:**
+
+* virus - When the infected program is launched, the virus clones itself and spreads to other files on the device. An important characteristic of viruses is that they have to be activated by the user to start the infection.
+* worm -doesn't have this limitation. A worm is malware that can duplicate and spread itself across systems on its own*
+* trojan - malware that looks like a legitimate file or program. 
+* ransomware - Attackers often use trojans to gain access and install another kind of malware called ransomware. Ransomware is a type of malicious attack where attackers encrypt an organization's data and demand payment to restore access
+* spyware - Spyware is malware that's used to gather and sell information without consent. Consent is a keyword in this case. (to collect data like login credentials, account PINs, and other types of sensitive information for their own personal gain.)
+
+
+* scareware. This type of malware employs tactics to frighten users into infecting their own device. 
+
+* Fileless malware does not need to be installed by the user because it uses legitimate programs that are already installed to infect a computer. This type of infection resides in memory where the malware never touches the hard drive.
+
+* A rootkit is malware that provides remote, administrative access to a computer. Most attackers use rootkits to open a backdoor to systems, allowing them to install other forms of malware or to conduct network security attacks.
+    -This kind of malware is often spread by a combination of two components: a dropper and a loader. A dropper is a type of malware that comes packed with malicious code which is delivered and installed onto a target system. 
+            - For example, a dropper is often disguised as a legitimate file, such as a document, an image, or an executable to deceive its target into opening, or dropping it, onto their device. If the user opens the dropper program, its malicious code is executed and it hides itself on the target system.
+
+            - Multi-staged malware attacks, where multiple packets of malicious code are deployed, commonly use a variation called a loader. A loader is a type of malware that downloads strains of malicious code from an external source and installs them onto a target system. Attackers might use loaders for different purposes, such as to set up another type of malware---a botnet.
+
+
+            -  botnet, short for “robot network,” is a collection of computers infected by malware that are under the control of a single threat actor, known as the “bot-herder.” Viruses, worms, and trojans are often used to spread the initial infection and turn the devices into a bot for the bot-herder. The attacker then uses file sharing, email, or social media application protocols to create new bots and grow the botnet. When a target unknowingly opens the malicious file, the computer, or bot, reports the information back to the bot-herder, who can execute commands on the infected computer.
+
+
+
+*****
