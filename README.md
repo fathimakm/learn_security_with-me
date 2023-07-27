@@ -1162,6 +1162,11 @@ Malware is software designed to harm devices or networks. Malware, which is shor
 * spyware - Spyware is malware that's used to gather and sell information without consent. Consent is a keyword in this case. (to collect data like login credentials, account PINs, and other types of sensitive information for their own personal gain.)
 
 
+
+
+
+Additional Info:
+
 * scareware. This type of malware employs tactics to frighten users into infecting their own device. 
 
 * Fileless malware does not need to be installed by the user because it uses legitimate programs that are already installed to infect a computer. This type of infection resides in memory where the malware never touches the hard drive.
@@ -1178,3 +1183,47 @@ Malware is software designed to harm devices or networks. Malware, which is shor
 
 
 *****
+CryptoJacking - when someone's computing resources are illegally hijacked to mine cryptocurrencies.
+
+*****
+
+# Cross- site scripting (XSS)
+
+__Web-based exploits__ are malicious code or behavior that's used to take advantage of coding flaws in a web application
+
+__An injection attack__ is malicious code inserted into a vulnerable application. 
+
+
+A common and dangerous type of injection attack that's a threat to web apps is **cross-site scripting**. Cross site scripting, or XSS, is an injection attack that inserts code into a vulnerable website or web application. These attacks are often delivered by exploiting the two languages used by most websites, HTML and JavaScript. Both can give cybercriminals access to everything that loads on the infected web page. This can include session cookies, geolocation, and even webcams and microphones.
+
+types of XSS attacks: reflected, stored, and DOM-based.
+
+__reflected__ A reflected XSS attack is an instance where a malicious script is sent to the server and activated during the server's response. A common example of this is the search bar of a website. In a reflected XSS attack, criminals send their target a web link that appears to go to a trusted site. When they click the link, it sends a HTTP request to the vulnerable site server. The attacker script is then returned or reflected back to the innocent user's browser. Here, the browser loads the malicious script because it trusts the server's response. With the script loaded, information like session cookies are sent back to the attacker.
+
+In a __stored__ XSS attack, the malicious script isn't hidden in a link that needs to be sent to the server. Instead a stored XSS attack is an instance when malicious script is injected directly on the server. Here, attackers target elements of a site that are served to the user. This could be things like images and buttons that load when the site is visited. Infected elements activate the malicious code when a user simply visits the site. Stored XSS attacks can be damaging because the user has no way of knowing the site is infected beforehand.
+
+
+ __DOM-based XSS__. DOM stands for Document Object Model, which is basically the source code of a website. A DOM-based XSS attack is an instance when malicious script exists in the web page a browser loads. Unlike reflected XSS, these attacks don't need to be sent to the server to activate.
+
+In a DOM-based attack, a malicious script can be seen in the URL. In this example, the website's URL contains parameter values. The parameter values reflect input from the user. Here, the site allows users to select color themes. When the user makes a selection, it appears as part of the URL. In a DOM-based attack, criminals change the parameter that suspecting an input. For example, they could hide malicious JavaScript in the HTML tags. The browser would process the HTML and execute the JavaScript.
+
+******
+## SQL Injection
+__ SQL injection__ is an attack that executes unexpected queries on a database. Like cross-site scripting, SQL injection occurs due to a lack of sanitized input. The injections take place in the area of the website that are designed to accept user input. A common example is the login form to access a site. One of these forms might trigger a backend SQL statement like this when a user enters their credentials. Web forms, like this one, are designed to copy user input into the statement exactly as they're written.
+
+The statement then sends a request to the server, which runs the query. Websites that are vulnerable to SQL injection insert the user's input exactly as it's entered before running the code.
+
+__how to prevent:__
+1. Prepared statements: a coding technique that executes SQL statements before passing them on to a database
+
+2. Input sanitization: programming that removes user input which could be interpreted as code.
+
+3. Input validation: programming that ensures user input meets a system's expectations.
+
+__categories of SQL injection:__
+
+* In-band(uses the same communication channel to launch the attack and gather the results.)
+
+* Out-of-band(uses a different communication channel  to launch the attack and gather the results.)
+
+* Inferential (occurs when an attacker is unable to directly see the results of their attack. Instead, they can interpret the results by analyzing the behavior of the system.)
