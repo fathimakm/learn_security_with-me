@@ -1193,6 +1193,7 @@ __Web-based exploits__ are malicious code or behavior that's used to take advant
 
 __An injection attack__ is malicious code inserted into a vulnerable application. 
 
+XSS attacks are delivered by exploiting the two languages used by most websites, __HTML and JavaScript__.
 
 A common and dangerous type of injection attack that's a threat to web apps is **cross-site scripting**. Cross site scripting, or XSS, is an injection attack that inserts code into a vulnerable website or web application. These attacks are often delivered by exploiting the two languages used by most websites, HTML and JavaScript. Both can give cybercriminals access to everything that loads on the infected web page. This can include session cookies, geolocation, and even webcams and microphones.
 
@@ -1227,3 +1228,46 @@ __categories of SQL injection:__
 * Out-of-band(uses a different communication channel  to launch the attack and gather the results.)
 
 * Inferential (occurs when an attacker is unable to directly see the results of their attack. Instead, they can interpret the results by analyzing the behavior of the system.)
+
+
+
+*****
+
+__Threat modeling__
+
+How to prepare for threats - by threat modeling 
+`a process of identifying assets, their vulnerabilities, and how each is exposed to threats.`  
+
+6 steps of a threat model:
+
+1. define the scopes
+2. identify threats
+3. characterize the environment
+4. analyze threats
+5. Mitigate threats
+6. evaluate findings
+
+
+When performing threat modeling, there are multiple methods that can be used, such as:
+
+- STRIDE
+- PASTA
+- Trike
+- VAST
+
+
+__PASTA__
+Process of Attack Simulation and Threat Analysis (PASTA) is a risk-centric **threat modeling process** developed by two OWASP leaders and supported by a cybersecurity firm called VerSprite. Its main focus is to discover evidence of viable threats and represent this information as a model. PASTA's evidence-based design can be applied when threat modeling an application or the environment that supports that application. Its seven stage process consists of various activities that incorporate relevant security artifacts of the environment, like vulnerability assessment reports.
+
+PASTA Threat model framework
+1. define the business and security obsjectives
+2. define the technical scope
+3. decompose the application
+4. perform a threat analysis
+5. perform a vulnerability analysis
+6. conduct attack modeling
+7. analyse risk and impact
+
+******
+
+
