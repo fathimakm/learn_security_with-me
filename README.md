@@ -1,4 +1,4 @@
-# security_learn_notes
+# Security Learning Notes
 ## SSL Secure Socket Layer
 ---
 * It is a security protocol used to establish an encrypted link between a web server and a web browser.
