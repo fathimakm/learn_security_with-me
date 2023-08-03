@@ -9,6 +9,7 @@ Universe Resource Locator
 4. Resource  (phone)
 
 ***
+# working
 1. user enters URL
    
 2.. Browser needs to know how to reach the server, that is done with the help of DNS lookup (Domian name system)
