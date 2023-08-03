@@ -12,7 +12,7 @@ Universe Resource Locator
 # working
 1. user enters URL
    
-2.. Browser needs to know how to reach the server, that is done with the help of DNS lookup (Domian name system)
+2. Browser needs to know how to reach the server, that is done with the help of DNS lookup (Domian name system)
 DNS translates domain name to ip addresses.
 
 
