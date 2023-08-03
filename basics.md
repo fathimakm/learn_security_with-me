@@ -21,11 +21,11 @@ DNS translates domain name to ip addresses.
    
 3. After the browser gets the IP address, the browser establishes a TCP connection with the server (using TCP Handshake)
 
-* TO keep the loading process faster, modern browsers use keep-alive connection to try to reuse an established TCP connection to the server
+* To keep the loading process faster, modern browsers use keep-alive connection to try to reuse an established TCP connection to the server
 
 * If the protocol is HTTPS, establishing a connection is more evolved > SSL/TLS handshake is used > to establish an encrypted connection between the browser and server
 
-* SSl/TLS handshake is expensive >ao to lower the cost > browser uses tricks like SSL session resumption
+* SSl/TLS handshake is expensive >so to lower the cost > browser uses tricks like SSL session resumption to try to lower the cost.
 
 4. Finally, Browser sends HTTP request to the server over the established TCP connection
 
@@ -53,6 +53,8 @@ steps:
  The browser establishes a tcp connection with the server 
 `TCP SYN, TCP SYN + ACK, TCP ACK` (with these three steps, connection is established)
 
+- SYN means synchronous sequence number
+
 2. __Certificate Check__
     * the browser `client hello` which contains > 1. what TLS version it can support (TLS 1.2, TLS 1.3 etc) > 2. which cyber suite browser supports (cyber suit is a set of encryption algorithms to use to encrypt data)
 
@@ -65,18 +67,19 @@ steps:
 
 3. __Key Exchange__
 
-    * The step where the client and the server comes up with a share encryption key to use to encrypt data
+    * The step where the client and the server comes up with a shared encryption key to use to encrypt data
     * the data send by the client is encrypteed using server's public key and can only be decryped by server's private key
-    * this is how the client sneds an encryption key safely to server
+    * this is how the client sends an encryption key safely to server
     * All this is done in the `client key exchange` message. >exact details vary depending on the cyber suite used.
 
     ### RSA
-    1. the client generates an encryption key (aka session key) > this  generates session key is encrypted using server's public key > Encrypted session key is send over to the internet
+    1. the client generates an encryption key (aka session key) > this  generated session key is encrypted using server's public key > Encrypted session key is send over to the internet
 
     2. The server recieves th encryped session key and decrypts it with server's private key 
 
 
-4. Data Transmission
+4. __Data Transmission_
+
 
     - Now both client and server holds the same session key > This is where the session key and the agreed upon cyber suite is used to send encrypted data back and forth in a secure bi-directional channel.
 
@@ -93,7 +96,8 @@ steps:
 * Connection Oriented protocol > it establishes a connection between two devices before transfering data and maintains that connection throughout the tranfer process.
 
 - used when no loss of data is tolerated
-- ex:surfing the web(HTTPS), sending email (SMTS), Transferring Files(FTP)
+- ex:surfing the web(HTTP), sending email (SMTS), Transferring Files(FTP)
+- supports unicast
 
 To establish connection - 3 way handshke 
 `Syn, Syn-Ack, Ack`
@@ -102,10 +106,11 @@ To disconnect
 
 
 # UDP
-
-**Connectionless Protocol**- (aka Fire and Target since it doesn't gaurantee that all data is successfully transferred) 
+User Data gram Protocol
+**Connectionless oriented Protocol**- (aka Fire and Target since it doesn't gaurantee that all data is successfully transferred) 
 
 - used when some data loss is acceptable and speed is important
+- supports unicast, multicast, broadcast
 
 - ex: Video, audio, online games
 
