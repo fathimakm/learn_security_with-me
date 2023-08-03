@@ -17,7 +17,7 @@ DNS translates domain name to ip addresses.
 
 
 * To makenDNS look up fast, DNS information is heavily cached
-Browser caches it for a period of time (so looks up ip address in cache) > if not found > browser asks the operating system for it > bcs os also stores dns cache for a short period of time > if not found > browser makes a query out to the internet to a DNS resolver > this sets off a chain of the request until the IP address is solved.
+- Browser caches it for a period of time (so looks up ip address in cache) > if not found > browser asks the operating system for it > bcs os also stores dns cache for a short period of time > if not found > browser makes a query out to the internet to a DNS resolver > this sets off a chain of the request until the IP address is solved.
    
 3. After the browser gets the IP address, the browser establishes a TCP connection with the server (using TCP Handshake)
 
