@@ -12,7 +12,7 @@ Universe Resource Locator
 # working
 1. user enters URL
    
-2. Browser needs to know how to reach the server, that is done with the help of DNS lookup (Domian name system)
+2. Browser needs to know how to reach the server, that is done with the help of __DNS lookup (Domian name system)__
 DNS translates domain name to ip addresses.
 
 
@@ -85,3 +85,27 @@ steps:
  In the above example, we use TLS 1.2 version and encryption algorithm as RSA. TLS 1.2 uses two network round trips to complete
 
  TLV 1.3 is the latest version and is supportes on all major browsers, RSA is not supportes by TLS 1.3, rather diffie -hellman is used for exchanging session keys. TLS 1.3 optimizes the handshake to reduce the number of network round trips to one.
+
+
+# TCP
+
+**Transmission control Protocol** 
+* Connection Oriented protocol > it establishes a connection between two devices before transfering data and maintains that connection throughout the tranfer process.
+
+- used when no loss of data is tolerated
+- ex:surfing the web(HTTPS), sending email (SMTS), Transferring Files(FTP)
+
+To establish connection - 3 way handshke 
+`Syn, Syn-Ack, Ack`
+To disconnect
+`Fin, Ack`
+
+
+# UDP
+
+**Connectionless Protocol**- (aka Fire and Target since it doesn't gaurantee that all data is successfully transferred) 
+
+- used when some data loss is acceptable and speed is important
+
+- ex: Video, audio, online games
+
