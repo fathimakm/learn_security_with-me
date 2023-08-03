@@ -32,3 +32,6 @@ Browser caches it for a period of time (so looks up ip address in cache) > if no
 5. The server processes the request and sends back a HTTP response
 
 6. The browser receives the response and renders HTML content, images javascript bundle etc
+
+***
+# SSL, TLS, HTTP :)
