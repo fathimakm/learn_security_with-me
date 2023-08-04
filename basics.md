@@ -189,4 +189,12 @@ __Disadvantage of Microserices: breaking up of the dtatbase
 - a key component is an API gateway (handles incoming requests and routes them to the relevant microservices) >> Api gateway relies on identify provider service to handle the authentication and authorization of each request coming through the api gateway.
 
 ### when to use microservices 
-costly> used by large teams
+costly> used by large teams > useful when dedicated teams are involved
+
+
+# SSO
+It is an Authentication scheme
+- Enables a user to securely access multiple applications and services using a sing ID.
+
+- SSO is built on a concept called Federated Identit
+- there are 2 common protocols for this authentication process >> 1. SAML Security Assertion Markup Language (used at work, passes signes Xml document)>>2. OpenID Connect (used when logging in youtube using gmial account, sends signed JSON documnet)
