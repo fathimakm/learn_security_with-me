@@ -124,7 +124,7 @@ __API__ - Application program Interface - It is a way for two computers to talk 
 
 __REST__ is a set of rules that has been the common standard for building web API (since 2000)
 
-- An PI that follows REST standardd is called __RESTful API__
+- An API that follows REST standard is called __RESTful API__
 (ex: google maps)
 
 ## RESTful API 
@@ -141,4 +141,52 @@ CRUD
 * PUT > UPDATE
 * DELETE > DELETE
 
-HTTP/1.1 200 OK
+HTTP/1.1 200 OK // the first line of response from server contains status code
+
+1. 1xx Response Status Codes: Information Request
+2. 2xx Response Status Codes: Success
+3. 3xx Response Status Codes: Redirection
+4. 4xx Response Status Codes: Client Errors
+5. 5xx Response Status Codes: Server Errors
+
+
+- A REST implementation should be **stateless**. (client and server don't need to store any information about each other, Also every request and response is independent from all others) > This results web application to be scalable and well behaved
+
+* If an API endpoint returns a huge amount of data >> use __pagination__ >> common pagination scheme uses limit and offset as parameters >> `/products?limit=25&offset=50`
+
+* __Versioning__ allows an implementation to provide backward compactibility (if we introduce breaking changes from one version to another, consumers will get more time to move to the next verion)
+
+* ways to version an API - 
+     /v1/products, /v2/prosucts (adding as prefix to resource)
+
+examples of API: REST, graphQL, gRPC
+
+******
+
+# Microservices 
+- enables large teams to build scalable application that are composed of many loosely coupled services
+
+- microservices are loosely coupled, each service handles a dedicated function inside a large- scale application
+
+- ex: shopping cart, billing, user profile, push notification (these all can be individual micro sevices)
+
+These funcyional area are sometimes called domait\
+
+- Microservices communicate with each other via well defined interfaces with small surface areas >> The small surface areas limit the blast radius of failures and defects 
+
+- Microservices talk to one another over a combination of remote procedure calls(RPC), event straming, message brokers (these three are different surface area)
+
+- RPC like gRPC provides faster response, but the blast radius(impact to other microservices) would be larger when the service go down
+
+- Event streaming provides better isolation between services but they take longer to process
+
+- microservices can be independently deployed since each service is small and hs smaller blast radius
+
+-well architected microservice practice strong information hiding > means breaking up a monolithic database into logical components and keeping it hidden in itsrespective space
+
+__Disadvantage of Microserices: breaking up of the dtatbase
+
+- a key component is an API gateway (handles incoming requests and routes them to the relevant microservices) >> Api gateway relies on identify provider service to handle the authentication and authorization of each request coming through the api gateway.
+
+### when to use microservices 
+costly> used by large teams
