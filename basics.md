@@ -114,3 +114,31 @@ User Data gram Protocol
 
 - ex: Video, audio, online games
 
+
+
+# REST API
+
+__API__ - Application program Interface - It is a way for two computers to talk to each other
+
+- Most common API used by most mobile and web application is **REST** (It stands for REpresentational State Transfer)
+
+__REST__ is a set of rules that has been the common standard for building web API (since 2000)
+
+- An PI that follows REST standardd is called __RESTful API__
+(ex: google maps)
+
+## RESTful API 
+Organizes resources into a set of unique URIs (Uniform Resource Identifier)
+
+__URI differentiate different types of resources in a server 
+
+client interacts with a resource by making a request to the endpoint over HTTP . 
+POST/products HTTP/1.1
+
+CRUD
+* POST > Create
+* GET > READ
+* PUT > UPDATE
+* DELETE > DELETE
+
+HTTP/1.1 200 OK
