@@ -94,7 +94,9 @@ steps:
 
 **Transmission control Protocol** 
 * Connection Oriented protocol > it establishes a connection between two devices before transfering data and maintains that connection throughout the tranfer process.
-
+- data is divided into small mangeable segments and each segment is send individually.
+-Each segment has a sequence number attached to it, the reviever uses the seq, number to eassemble th segments.
+- Tcp also provides error checking to make sure no data was lost .
 - used when no loss of data is tolerated
 - ex:surfing the web(HTTP), sending email (SMTS), Transferring Files(FTP)
 - supports unicast
@@ -108,7 +110,10 @@ To disconnect
 # UDP
 User Data gram Protocol
 **Connectionless oriented Protocol**- (aka Fire and Target since it doesn't gaurantee that all data is successfully transferred) 
-
+- simpler and faster than TCP
+- it simply send packets of data from one device to another
+- the recieving end is responsible for error checking.
+- if any error detected, the recieving end simply discards the packet.
 - used when some data loss is acceptable and speed is important
 - supports unicast, multicast, broadcast
 
