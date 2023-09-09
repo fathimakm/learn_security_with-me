@@ -1136,6 +1136,8 @@ Malware is software designed to harm devices or networks. Malware, which is shor
 
 Additional Info:
 
+* Adware: A type of legitimate software that is sometimes used to display digital advertisements in applications
+
 * scareware. This type of malware employs tactics to frighten users into infecting their own device. 
 
 * Fileless malware does not need to be installed by the user because it uses legitimate programs that are already installed to infect a computer. This type of infection resides in memory where the malware never touches the hard drive.
@@ -1152,7 +1154,9 @@ Additional Info:
 
 
 *****
-CryptoJacking - when someone's computing resources are illegally hijacked to mine cryptocurrencies.
+__CryptoJacking__ - when someone's computing resources are illegally hijacked to mine cryptocurrencies.
+
+__Intrusion detection system (IDS)__: An application that monitors system activity and alerts on possible intrusions
 
 *****
 
