@@ -137,7 +137,7 @@ __REST__ is a set of rules that has been the common standard for building web AP
 ## RESTful API 
 Organizes resources into a set of unique URIs (Uniform Resource Identifier)
 
-__URI differentiate different types of resources in a server 
+__URI__ differentiate different types of resources in a server 
 
 client interacts with a resource by making a request to the endpoint over HTTP . 
 POST/products HTTP/1.1
