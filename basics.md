@@ -41,6 +41,11 @@ HTTP/1.1 200 OK and HTTP Headers
 ##### HTTP Headers 
 used by the client and server to specify additional information (in request requirements of the client is send)
 
+connection: close // ends the tcp connection after sending request. 
+pragma header tells the client not to store the response within the browser cache
+x- powered by : php/5.2.4 tells which server side language is processing your requests
+options method is used to obtain http methods that are available for a specefic path or resource
+upgrade insecure requests: 1 -> upgrades http to https if possible
 
 
 
@@ -159,6 +164,32 @@ CRUD
 * GET > READ
 * PUT > UPDATE
 * DELETE > DELETE
+
+HEAD(-> similar to GET) , TRACE(used for diagnostic approach)
+options method is used to obtain http methods that are available for a specefic path or resource
+
+GET - Retrieves a resource from the server. Parameters are passed in the URL query string. Should have no side effects.
+POST - Sends data to the server. Used to submit form data or upload files. Data is passed in the request body. Can create or update resources.
+PUT - Uploads a resource to update an existing resource. Parameters passed in URL or request body. Idempotent.
+DELETE - Deletes a resource from the server. Parameters passed in URL. Idempotent.
+HEAD - Identical to GET but does not return a response body. Used to retrieve headers and metadata only.
+TRACE - Echos the received request so the client can see changes made by intermediate servers. Used for debugging.
+OPTIONS - Returns supported HTTP methods allowed on the URL. Used for CORS preflight requests.
+In summary:
+
+GET, HEAD, OPTIONS are safe methods that retrieve data.
+POST creates resources and sends data to the server.
+PUT and DELETE modify resources by uploading or deleting them.
+TRACE is used for debugging, and OPTIONS for CORS.
+
+
+
+
+
+
+
+
+# status code
 
 HTTP/1.1 200 OK // the first line of response from server contains status code
 
