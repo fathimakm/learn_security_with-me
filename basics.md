@@ -34,10 +34,12 @@ DNS translates domain name to ip addresses.
 6. The browser receives the response and renders HTML content, images javascript bundle etc
 
 ***
-# SSL/TLS, HTTPs :)
+# SSL/TLS, HTTPs :
 
 ## HTTPS
 
+- http is a stateless application layer protocol -> specificaly designed for communication btw web browsers and web servers
+- most commonly used version today is HTTP/1.1
 - If we use http(hyper text tranfer protocol), the information can be read by anyone who intercepts it. 
 This limitation is solved by HTTPS.
 - If we use HTTPS, the data send over the internet is unreadable by anyone other than the sender and reciever
