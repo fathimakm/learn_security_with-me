@@ -16,7 +16,8 @@ All are seperated by a dot
 
 - In Header, there will be type of token and hashing algorithm used.
 - In payload, we gwt status code, if any data was passed like id, email , password etc.
-- if we find the method of hashing applied to password, we can decode the pass( ex if MD5, use MD5 decryption)
+- if we find the method of hashing applied to password (hash identifier), we can decode the pass( ex if MD5, use MD5 decryption)
+- how to recognize if it is a MD5 hashing ( 32 characters long, hexadecimal characters, which are 0-9 and A-F, No special characters etc )
 
 
 
@@ -31,3 +32,4 @@ All are seperated by a dot
 - exposed to man-in-the-middle attacks. A MITM attacker can intercept and read the cookie if it is not HttpOnly.
 
 directory discovery tools like bust or go bust
+
