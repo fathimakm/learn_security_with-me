@@ -8,6 +8,10 @@ Universe Resource Locator
 3. path:  (product/electric)
 4. Resource  (phone)
 
+Two types of URL
+* Absolute: contains all components from the protocol to the parameters
+* Relative: Shorter and only contains the location of the resource
+
 ***
 # working
 1. user enters URL
