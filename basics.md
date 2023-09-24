@@ -34,17 +34,29 @@ DNS translates domain name to ip addresses.
 6. The browser receives the response and renders HTML content, images javascript bundle etc
 
 ***
+#### HTTP Request
+GET /home.html HTTP/1.1 and HTTP Headers
+#### HTTP Response
+HTTP/1.1 200 OK and HTTP Headers
+##### HTTP Headers 
+used by the client and server to specify additional information (in request requirements of the client is send)
+
+
+
+
+***
 # SSL/TLS, HTTPs :
 
 ## HTTPS
 
 - http is a stateless application layer protocol -> specificaly designed for communication btw web browsers and web servers
 - most commonly used version today is HTTP/1.1
+- http runs on top of TCP
 - If we use http(hyper text tranfer protocol), the information can be read by anyone who intercepts it. 
 This limitation is solved by HTTPS.
 - If we use HTTPS, the data send over the internet is unreadable by anyone other than the sender and reciever
 - HTTPS is an extension of the HTTP protocol
-- With HTTPS, the data is send in an encrypted form using __TLS__ , __Transport Layer Security__ (if an attacker tried to intercept > they would only get jumbled unreabdable data)
+- With HTTPS, the data is send in an encrypted form using __TLS__ , __Transport Layer Security__ (if an attacker tried to intercept -> they would only get jumbled unreadable data)
 
 
 
