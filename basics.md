@@ -42,6 +42,10 @@ DNS translates domain name to ip addresses.
 GET /home.html HTTP/1.1 and HTTP Headers
 #### HTTP Response
 HTTP/1.1 200 OK and HTTP Headers
+
+HTTP protocol defaults to port 80, and HTTPS to port 443
+
+
 ##### HTTP Headers 
 used by the client and server to specify additional information (in request requirements of the client is send)
 
@@ -252,3 +256,15 @@ It is an Authentication scheme
 
 - SSO is built on a concept called Federated Identit
 - there are 2 common protocols for this authentication process >> 1. SAML Security Assertion Markup Language (used at work, passes signes Xml document)>>2. OpenID Connect (used when logging in youtube using gmial account, sends signed JSON documnet)
+
+
+# TLD
+The TLD is the highest level in the domain hierarchy, such as ".com," ".net," ".org," etc.
+* Additional Domain Level (TLD+1): This is the next level down in the domain hierarchy. For example, if you have a domain like "example.com," the "example" part is the additional domain level (TLD+1).
+
+
+https://app.example.com
+
+scheme, TLD, TLD +1 > if these are same for two url > then same site
+
+if scheme, domain , port are same for two url > same origin
