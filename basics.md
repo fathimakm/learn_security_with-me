@@ -8,6 +8,12 @@ Universe Resource Locator
 3. path:  (product/electric)
 4. Resource  (phone)
 
+
+
+`http://www.test.com:80/example/to/test.php?uid=110`
+www - subdomian > test - Hostname > Com - TLD > 80 - port > example/to - path > test.php -resource > uid - parameter > 110 - value
+
+
 Two types of URL
 * Absolute: contains all components from the protocol to the parameters
 * Relative: Shorter and only contains the location of the resource
